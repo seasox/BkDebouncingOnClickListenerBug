@@ -33,6 +33,12 @@ public class FragmentA extends Fragment {
     }
 
     @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
         if (true) {
